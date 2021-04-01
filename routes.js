@@ -14,13 +14,11 @@ router.post("/", (req, res) => {
     name: req.body.name,
     message: translated,
   };
-  console.log(viewData);
-  // .then(() => {
-  //   return db.addHistoryItem(viewData);
-  // })
-  // .then(() => {
-  //   res.redirect("/translated", translated);
-  // });
+  db.addHistoryItem(viewData).then(() => {
+    res.redirect("/translated");
+  });
 });
 
-//router.get("/translated", (req, res) => {});
+router.get("/translated", (req, res) => {
+  res.render("translated");
+});
