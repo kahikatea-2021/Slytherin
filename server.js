@@ -1,7 +1,7 @@
 const express = require("express");
 const hbs = require("express-handlebars");
 
-//const userRoutes = require('./users')
+const translationsRoutes = require("./translations");
 
 const server = express();
 
@@ -13,6 +13,6 @@ server.use(express.urlencoded({ extended: true }));
 
 // Routes
 
-//server.use('/', userRoutes)
+server.use("/", translationsRoutes);
 
 module.exports = server;
