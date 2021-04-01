@@ -4,7 +4,7 @@ module.exports = router;
 const db = require("./db");
 
 router.get("/", (req, res) => {
-  res.render("index");
+  res.render("translated");
 });
 
-router.get();
+//router.get();
