@@ -1,11 +1,10 @@
 const express = require("express");
-
-const db = require("./db");
-
 const router = express.Router();
+module.exports = router;
+const db = require("./db");
 
 router.get("/", (req, res) => {
   res.render("index");
 });
 
-module.exports = router;
+router.get();
