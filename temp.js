@@ -1,3 +1,5 @@
+// ////////////This has now been migrated to db.js
+
 function parselTongue(str) {
   const outputArray = []
   const characters = str.split('')
