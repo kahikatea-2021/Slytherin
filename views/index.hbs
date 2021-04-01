@@ -1,0 +1,30 @@
+
+<div>
+  <h1>Welcome</h1>
+
+{{!-- name input box --}}
+  <form action="/" method="post">  
+  <label for="name">Name:</label><br>
+  <input type="text" id="name" name="name" maxlength="100"><br>           
+  </form>
+</div>
+
+{{!-- translation input box --}}
+<form>
+  <form action="/" method="post"></form>
+  <label for="translate">What would you like to translate?</label><br>
+  <input type="text" id="translate" name="translate" maxlength="500">><br>
+</form>
+
+{{!-- character drop down list --}}
+<label for="characters">Choose a character:</label>
+<select name="characters" id="characters">
+  <option value="snape">Snape</option>
+  {{!-- <option value="hermione">Hermione</option>
+  <option value="filch">Filch</option> --}}
+</select>
+
+{{!-- submit button --}}
+<button class="... focus:ring-4 focus:ring-green-500 focus:ring-opacity-50">
+  Submit
+</button>
