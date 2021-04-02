@@ -13,9 +13,10 @@ router.post("/", (req, res) => {
   const viewData = {
     name: req.body.name,
     message: translated,
+    imgUrl: req.body.characters,
   };
   db.addHistoryItem(viewData).then(() => {
-    res.render('translated', viewData)
+    res.render("translated", viewData);
   });
 });
 
@@ -26,11 +27,10 @@ router.get("/translated", (req, res) => {
 router.get("/history", (req, res) => {
   return db.getHistory()
   .then (result => {
-    // const x = result.splice(result.length-10, 10)
     const viewData = {
   
       history: result.splice(result.length-10, 10)
     }
     res.render("history", viewData);
-  })
+  });
 });
