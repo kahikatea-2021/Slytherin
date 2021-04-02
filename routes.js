@@ -22,3 +22,15 @@ router.post("/", (req, res) => {
 router.get("/translated", (req, res) => {
   res.render("translated");
 });
+
+router.get("/history", (req, res) => {
+  return db.getHistory()
+  .then (result => {
+    const viewData = {
+  
+      history: result
+    }
+    console.log(viewData)
+    res.render("history", viewData);
+  })
+});
