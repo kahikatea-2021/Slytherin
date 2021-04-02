@@ -13,9 +13,10 @@ router.post("/", (req, res) => {
   const viewData = {
     name: req.body.name,
     message: translated,
+    imgUrl: req.body.characters,
   };
   db.addHistoryItem(viewData).then(() => {
-    res.render('translated', viewData)
+    res.render("translated", viewData);
   });
 });
 
@@ -24,13 +25,11 @@ router.get("/translated", (req, res) => {
 });
 
 router.get("/history", (req, res) => {
-  return db.getHistory()
-  .then (result => {
+  return db.getHistory().then((result) => {
     const viewData = {
-  
-      history: result
-    }
-    console.log(viewData)
+      history: result,
+    };
+    console.log(viewData);
     res.render("history", viewData);
-  })
+  });
 });
