@@ -1,9 +1,16 @@
-<h1>The Chamber of Secrets:</h1><br>
+<div class="m-10 text-white">
+    {{>header}}
+    <h1 class="items-center flex flex-col uppercase tracking-wide text-black text-3xl font-bold mb-2">The Chamber of
+        Secrets:</h1>
+    <br>
 
-<a href="/">Translate another thing</a><br>
-<br>
+    <div class="flex justify-center"><a class="border-2 p-2 items-center flex flex-col tracking-wide mb-2"
+            href="/">Translate another
+            thing</a></div><br>
+    <br>
 
-{{#each history}}
-<h1>{{name}}</h1><br>
-<p>{{message}}</p><br>
-{{/each}}
+    {{#each history}}
+    <h1 class="text-lg font-bold">{{name}}</h1>
+    <p>{{message}}</p><br>
+    {{/each}}
+</div>
