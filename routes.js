@@ -29,7 +29,6 @@ router.get("/history", (req, res) => {
     const viewData = {
       history: result,
     };
-    console.log(viewData);
     res.render("history", viewData);
   });
 });
