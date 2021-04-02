@@ -15,7 +15,7 @@ router.post("/", (req, res) => {
     message: translated,
   };
   db.addHistoryItem(viewData).then(() => {
-    res.redirect("/translated");
+    res.render('translated', viewData)
   });
 });
 
