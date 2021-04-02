@@ -28,12 +28,9 @@ function parselTongue(str) {
 function getHistory(db = connection) {
   return db("history")
     .select("name", "message")
-    .then((result) => {
-      return {
-        history: result,
-      };
-    });
 }
+
+
 
 // stretch goal - to feed the translated text and name from the form into a new db entry
 function addHistoryItem(data, db = connection) {
@@ -42,5 +39,5 @@ function addHistoryItem(data, db = connection) {
       name: data.name,
       message: data.message,
     })
-    .then(() => {});
+    .then(() => { });
 }
