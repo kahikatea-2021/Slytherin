@@ -42,7 +42,5 @@ function addHistoryItem(data, db = connection) {
       name: data.name,
       message: data.message,
     })
-    .then(() => {
-      console.log("history item created");
-    });
+    .then(() => {});
 }
