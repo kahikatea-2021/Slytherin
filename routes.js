@@ -26,11 +26,11 @@ router.get("/translated", (req, res) => {
 router.get("/history", (req, res) => {
   return db.getHistory()
   .then (result => {
+    // const x = result.splice(result.length-10, 10)
     const viewData = {
   
-      history: result
+      history: result.splice(result.length-10, 10)
     }
-    console.log(viewData)
     res.render("history", viewData);
   })
 });
