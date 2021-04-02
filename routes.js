@@ -25,11 +25,12 @@ router.get("/translated", (req, res) => {
 });
 
 router.get("/history", (req, res) => {
-  return db.getHistory().then((result) => {
+  return db.getHistory()
+  .then (result => {
     const viewData = {
-      history: result,
-    };
-    console.log(viewData);
+  
+      history: result.splice(result.length-10, 10)
+    }
     res.render("history", viewData);
   });
 });
